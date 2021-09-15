@@ -14,7 +14,7 @@
 - **Jhon Edwin Tacusi Larota** - GitHub Account - [jhontacusi](https://github.com/jhontacusi)
 - **Antony Isaac Huaman Hermoza** - _GitHub Account_ - [Isaac170434](https://github.com/Isaac170434)
 - **Cesar Rodrigo Ttito Quilca** - _GitHub Account_ - [cesarodrigo21](https://github.com/cesarodrigo21)
-
+- **Vladimir Dante Casilla Percca** - _GitHub Account_ - [Casillas9856](https://github.com/Casillas9856)
 # Descripcion organizacional del sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas”
 
 La tutoría es un conjunto de procesos y actividades de información, acompañamiento y asesoría académica, integradas sistemáticamente y orientadas por el modelo educativo de la UNSAAC, desarrolladas por un conjunto de órganos de la universidad, para contribuir al proceso de formación integral del estudiante hacia el logro de su perfil de egreso. La tutoría del estudiante tiene como finalidad primordial, constituirse como un medio para hacer auténticos los fines que a su vez le están señalados por la Ley Universitaria. 
