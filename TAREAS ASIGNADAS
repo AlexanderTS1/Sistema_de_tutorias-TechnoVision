@@ -1,0 +1,21 @@
+
+LISTA DE TAREAS
+Asignado a -> Isaac 
+1. Home:Mostrar la lista de compañeros de tutoria el nombre del tutor.
+
+Asignado a -> Fiorela
+2. Solicitar cambio de tutor:Dirigido a director, llenar sus datos personales del cambio y tambien implmentar un boton
+   en donde confirme el envio
+   
+TUTOR
+Asignado a -> Vladimir
+3. Home: Mostrar la lista de sus tutorados con todos sus  datos respectivos
+
+Asignado a -> Rodrigo y Jeremy
+4. Ficha Tutoria: Crear un modelo para llamar la ficha de toturia considerando el documento .excel brindado por la docente
+
+
+Asignado a -> Alexander
+5. Notificar Horario: hacer el ingreso fecha y hora de las tutorias(un lick de la clase) y un boton en donde se pueda modificar estudiante
+Asignado a -> Tacusi
+6. Bd: Generar las tablas faltantes 
