@@ -6,7 +6,8 @@
 
 # Docente:
 - **Quintanilla Portugal Roxana Lisette** - _Docente_ - [Concytec](http://directorio.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=40930).
-
+# Para inicializar el proyecto
+* Para ejecutar nuestro COdigo: `python manage.py runserver`
 # Proyecto: “Sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas”
 # Integrantes 🤓:
 - **Fiorella Choque Bueno** - GitHub Account - [FioChoque](https://github.com/FioChoque)
