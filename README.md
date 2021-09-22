@@ -8,6 +8,8 @@
 - **Quintanilla Portugal Roxana Lisette** - _Docente_ - [Concytec](http://directorio.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=40930).
 
 # Proyecto: “Sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas”
+# Quienes Somos
+<img src="/docs/Equipo de trabajo TechNoVision.jpeg" alt="Nuestro  Equipo"/>
 # Para inicializar el proyecto
 * Para ejecutar nuestro COdigo: `python manage.py runserver`
 # Integrantes 🤓:
