@@ -9,7 +9,7 @@
 
 # Proyecto: “Sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas”
 # Quienes Somos
-<img src="/docs/Equipo de trabajo TechNoVision.jpeg" alt="Nuestro  Equipo"/>
+https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Equipo%20de%20trabajo%20TechNoVision.jpeg
 # Para inicializar el proyecto
 * Para ejecutar nuestro COdigo: `python manage.py runserver`
 # Integrantes 🤓:
