@@ -31,5 +31,5 @@ La tutoría es un conjunto de procesos y actividades de información, acompañam
 - pytz 2021.1
 - sqlparse 0.4.1
 
-#Documentacion final
-https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Tercera%20Entrega/Documentacion/Documentacion%20Finals.pdf
+# Documentacion final🛠:
+[Ducumentacion Finals](https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Tercera%20Entrega/Documentacion/Documentacion%20Finals.pdf)
