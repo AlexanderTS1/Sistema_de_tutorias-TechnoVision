@@ -79,6 +79,16 @@
             </li>
 
             <li class="nav-item">
+              {% url 'add_tutor_estudiante' as add_tutor_estudiante %}
+              <a href="{{ add_tutor_estudiante }}" class="nav-link {% if request.path == add_tutor_estudiante %} active {% endif %}">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Asignacion Tutor-Estudiante
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
               {% url 'manage_course' as manage_course %}
               {% url 'edit_course' course_id=id as edit_course %}
               <a href="{{ manage_course }}" class="nav-link {% if request.path == manage_course %} active {% endif %} {% if request.path == edit_course %} active {% endif %}">

@@ -58,6 +58,9 @@ urlpatterns = [
     path('admin_get_attendance_student/', HodViews.admin_get_attendance_student, name="admin_get_attendance_student"),
     path('admin_profile/', HodViews.admin_profile, name="admin_profile"),
     path('admin_profile_update/', HodViews.admin_profile_update, name="admin_profile_update"),
+    path('add_tutor_estudiante/',HodViews.add_tutor_estudiante,name="add_tutor_estudiante"),
+    path('add_tutor_estudiante_save/',HodViews.add_tutor_estudiante_save,name="add_tutor_estudiante_save"),
+
     
 
 
@@ -78,7 +81,8 @@ urlpatterns = [
     path('staff_profile_update/', StaffViews.staff_profile_update, name="staff_profile_update"),
     path('staff_add_result/', StaffViews.staff_add_result, name="staff_add_result"),
     path('staff_add_result_save/', StaffViews.staff_add_result_save, name="staff_add_result_save"),
-
+    path('staff_ficha_tutoria/',StaffViews.staff_ficha_tutoria,name="staff_ficha_tutoria"),
+    path('staff_estudiantes_cargo/',StaffViews.staff_estudiantes_cargo,name="staff_estudiantes_cargo"),
     # URSL for Student
     path('student_home/', StudentViews.student_home, name="student_home"),
     path('student_view_attendance/', StudentViews.student_view_attendance, name="student_view_attendance"),

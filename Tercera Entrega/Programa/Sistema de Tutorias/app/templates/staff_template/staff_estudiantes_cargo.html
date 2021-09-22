@@ -1,7 +1,7 @@
-{% extends 'hod_template/base_template.html' %}
+{% extends 'staff_template/base_template.html' %}
 
 {% block page_title %}
-    Litas de Tutores
+    Listar Estudiantes
 {% endblock page_title %}
 
 {% block main_content %}
@@ -10,9 +10,7 @@
 
 <section class="content">
         <div class="container-fluid">
-
-            <a class="btn btn-primary" href="{% url 'add_staff' %}" role="button">+ Agregar Tutor</a> <br/>&nbsp;
-
+            
             {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -36,7 +34,6 @@
                                 </div>
                                 </div>
                                 {% endif %}
-                                
 
             <div class="row">
 
@@ -44,7 +41,7 @@
                     <!-- general form elements -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Detalle de Tutores</h3>
+                            <h3 class="card-title">Detalles del Estudiante</h3>
 
                             <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
@@ -60,31 +57,42 @@
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
                             <thead>
-                                <tr>
-                                <th>Codigo</th>                              
+                                <tr>                            
+                                <th>Codigo</th>
                                 <th>Nombres</th>
-                                <th>Apellidos</th>                             
+                                <th>Apellidos</th>                          
                                 <th>Email</th>
+                                <th>Sexo</th>
+                                <th>Foto de perfil</th>
+                                <th>Inicio de ciclo</th>
+                                <th>Fin de ciclo</th>
+                                <th>Aula</th>
                                 <th>Ultimo login</th>
-                                <th>Fecha de registro</th>
+                                <th>Fecha de creacion</th>
                                 <th>Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for staff in staffs %}
-                                <tr>
-                                <td>{{ staff.admin.username }}</td>
-                                <td>{{ staff.admin.first_name }}</td>
-                                <td>{{ staff.admin.last_name }}</td>
-                                <td>{{ staff.admin.email }}</td>
-                                <td>{{ staff.admin.last_login }}</td>
-                                <td>{{ staff.admin.date_joined }}</td>
-                                <td>
-                                    <a href="{% url 'edit_staff' staff.admin.id %}" class="btn btn-success">Editar</a> 
-                                    <a href="{% url 'delete_staff' staff.admin.id %}" class="btn btn-danger">Eliminar</a>
-                                </td>
-                                </tr>
-                                {% endfor %}
+                                
+                                    {% for asignacion in asignaciones %}                                 
+                                        {% if  staff_obj.admin.id == asignacion.staff_id.admin.id %}
+                                            <tr>
+                                            <td>{{ asignacion.student_id.admin.id }}</td>
+                                            <td>{{ asignacion.student_id.admin.username }}</td>
+                                            <td>{{ asignacion.student_id.admin.first_name }}</td>
+                                            <td>{{ asignacion.student_id.admin.last_name }}</td>
+                                            <td>{{ asignacion.student_id.admin.email }}</td>
+                                            <td>{{ asignacion.student_id.gender }}</td>
+                                            <td> <img src="{{ asignacion.student_id.profile_pic }}" style="width: 100px;" /> </td>
+                                            <td>{{ asignacion.student_id.session_year_id.session_start_year }}</td>
+                                            <td>{{ asignacion.student_id.session_year_id.session_end_year }}</td>
+                                            <td>{{ asignacion.student_id.course_id.course_name }}</td>
+                                            <td>{{ asignacion.student_id.admin.last_login }}</td>
+                                            <td>{{ asignacion.student_id.admin.date_joined }}</td>                            
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                
                                 
                             </tbody>
                             </table>

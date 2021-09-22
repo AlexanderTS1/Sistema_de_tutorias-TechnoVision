@@ -8,7 +8,7 @@ from django.core import serializers
 import json
 
 
-from app.models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStaff, FeedBackStaffs, StudentResult
+from app.models import Asignacion, CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStaff, FeedBackStaffs, StudentResult
 
 
 def staff_home(request):
@@ -79,6 +79,9 @@ def staff_take_attendance(request):
     return render(request, "staff_template/take_attendance_template.html", context)
 
 
+def staff_ficha_tutoria(request):
+    return render(request,"staff_template/staff_ficha_tutoria.html")
+
 def staff_apply_leave(request):
     staff_obj = Staffs.objects.get(admin=request.user.id)
     leave_data = LeaveReportStaff.objects.filter(staff_id=staff_obj)
@@ -86,6 +89,18 @@ def staff_apply_leave(request):
         "leave_data": leave_data
     }
     return render(request, "staff_template/staff_apply_leave_template.html", context)
+
+def staff_estudiantes_cargo(request):
+    students = Students.objects.all()
+    asignaciones=Asignacion.objects.all()
+    staff_obj = Staffs.objects.get(admin=request.user.id)
+    context = {
+        "students": students,
+        "asignaciones": asignaciones,
+        "staff_obj": staff_obj
+    }
+    return render(request, 'staff_template/staff_estudiantes_cargo.html', context)
+
 
 
 def staff_apply_leave_save(request):
@@ -151,10 +166,15 @@ def get_students(request):
 
     # Only Passing Student Id and Student Name Only
     list_data = []
-
-    for student in students:
-        data_small={"id":student.admin.id, "name":student.admin.first_name+" "+student.admin.last_name}
-        list_data.append(data_small)
+    staff_obj = Staffs.objects.get(admin=request.user.id)
+    asignaciones=Asignacion.objects.all()
+    for student in students:      
+        for asignacion in asignaciones :
+                               
+            if staff_obj.admin.id==asignacion.staff_id.admin.id :
+                if student.admin.id==asignacion.student_id.admin.id :
+                    data_small={"id":student.admin.id, "name":student.admin.first_name+" "+student.admin.last_name}
+                    list_data.append(data_small)
 
     return JsonResponse(json.dumps(list_data), content_type="application/json", safe=False)
 

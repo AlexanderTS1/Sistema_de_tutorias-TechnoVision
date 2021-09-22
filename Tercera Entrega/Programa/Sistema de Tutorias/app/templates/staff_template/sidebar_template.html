@@ -38,6 +38,28 @@
             </li>
 
             <li class="nav-item">
+              {% url 'staff_estudiantes_cargo' as staff_estudiantes_cargo %}
+              <a href="{{ staff_estudiantes_cargo}}" class="nav-link {% if request.path == staff_estudiantes_cargo %} active {% endif %}">
+                <i class="nav-icon fas fa-calendar-plus"></i>
+                <p>
+                  Estudiantes a cargo
+                  {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              {% url 'staff_ficha_tutoria' as staff_ficha_tutoria %}
+              <a href="{{ staff_ficha_tutoria }}" class="nav-link {% if request.path == staff_ficha_tutoria %} active {% endif %}">
+                <i class="nav-icon fas fa-calendar-plus"></i>
+                <p>
+                  Ficha de Tutoria
+                  {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
               {% url 'staff_take_attendance' as staff_take_attendance %}
               <a href="{{ staff_take_attendance }}" class="nav-link {% if request.path == staff_take_attendance %} active {% endif %}">
                 <i class="nav-icon fas fa-calendar-plus"></i>
