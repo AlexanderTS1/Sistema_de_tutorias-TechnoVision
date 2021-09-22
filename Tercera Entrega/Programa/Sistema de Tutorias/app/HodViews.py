@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
 
-from app.models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, FeedBackStudent, FeedBackStaffs, LeaveReportStudent, LeaveReportStaff, Attendance, AttendanceReport
+from app.models import Asignacion, CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, FeedBackStudent, FeedBackStaffs, LeaveReportStudent, LeaveReportStaff, Attendance, AttendanceReport
 from .forms import AddStudentForm, EditStudentForm
 
 
@@ -101,10 +101,11 @@ def add_staff_save(request):
         last_name = request.POST.get('last_name')
         username = request.POST.get('username')
         email = request.POST.get('email')
-        password = request.POST.get('password')
+
 
         try:
-            user = CustomUser.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name, user_type=2)
+            password=[email.split("@")]
+            user = CustomUser.objects.create_user(username=username, password=password[0][0], email=email, first_name=first_name, last_name=last_name, user_type=2)
             user.save()
             messages.success(request, "Tutor agregado exitosamente!")
             return redirect('add_staff')
@@ -113,6 +114,7 @@ def add_staff_save(request):
             return redirect('add_staff')
 
 
+    
 
 def manage_staff(request):
     staffs = Staffs.objects.all()
@@ -338,7 +340,7 @@ def add_student_save(request):
             last_name = form.cleaned_data['last_name']
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
+            password = form.cleaned_data['username']
             session_year_id = form.cleaned_data['session_year_id']
             course_id = form.cleaned_data['course_id']
             gender = form.cleaned_data['gender']
@@ -479,6 +481,44 @@ def delete_student(request, student_id):
     except:
         messages.error(request, "No se pudo eliminar la estudiante.")
         return redirect('manage_student')
+
+
+def add_tutor_estudiante(request):
+    students = Students.objects.all()
+    staffs = Staffs.objects.all()
+    asignacion=Asignacion.objects.all()
+    context = {
+        "students": students,
+        "staffs": staffs,
+        "asignaciones":asignacion,
+    }
+
+    return render(request, "hod_template/add_tutor_estudiante.html",context)
+
+def add_tutor_estudiante_save(request):
+    if request.method != "POST":
+        messages.error(request, "¡Método no permitido!")
+        return redirect('add_tutor_estudiante')
+    else:
+
+        student_id = request.POST.get('student')
+        student = Students.objects.get(admin=student_id)
+
+        
+        staff_id = request.POST.get('staff')
+        staff = Staffs.objects.get(admin=staff_id)     
+        try:
+            
+            asignacion = Asignacion(student_id=student, staff_id=staff)  
+           
+            asignacion.save()        
+            
+
+            messages.success(request, "agregado exitosamente!")
+            return redirect('add_tutor_estudiante')
+        except:
+            messages.error(request, "¡No se pudo agregar !")
+            return redirect('add_tutor_estudiante')
 
 
 def add_subject(request):
