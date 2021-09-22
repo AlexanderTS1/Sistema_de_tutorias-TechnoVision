@@ -10,8 +10,12 @@
 # Proyecto: “Sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas” 🛠
 # Quienes Somos 
 ![Image text](https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Equipo%20de%20trabajo%20TechNoVision.jpeg)
-# Para inicializar el proyecto
-* Para ejecutar nuestro COdigo: `python manage.py runserver`
+# Prueba nuestro sistema:
+1. Ejecutar el codigo  con `python manage.py runserver` o dirigirse al sitio: link aqui
+2. Ejemplo para login de cada usuario:
+   - Coordiandor de tutoria(Admin): Usuario:  Contraseña:
+   - Tutor: Usuario:  Contraseña:
+   - Tutorado: Usuario:  Contraseña:
 # Integrantes 🤓:
 - **Fiorella Choque Bueno** - GitHub Account - [FioChoque](https://github.com/FioChoque)
 - **Alexander Ttito Saya** - GitHub Account - [AlexanderTS1](https://github.com/AlexanderTS1)
