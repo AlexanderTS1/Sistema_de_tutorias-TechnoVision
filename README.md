@@ -20,7 +20,6 @@
 - **Cesar Rodrigo Ttito Quilca** - _GitHub Account_ - [cesarodrigo21](https://github.com/cesarodrigo21)
 - **Vladimir Dante Casilla Percca** - _GitHub Account_ - [Casillas9856](https://github.com/Casillas9856)
 - **Jeremyk Rufino Vargas Arqque** - _GitHub Account_ -[jeremva3](https://github.com/jeremva3)
-- **Mariela Luycho Ancaifuro** - GitHub Account - [Mariela112](https://github.com/MLuAnc)
 
 # "Descripcion organizacional del sistema de Tutorías para la Escuela Profesional de Ingeniería Informática y de Sistemas”
 
