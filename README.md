@@ -38,4 +38,4 @@ La tutoría es un conjunto de procesos y actividades de información, acompañam
 - sqlparse 0.4.1
 
 # Documentacion final🛠:
-[Ducumentacion Final](https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Tercera%20Entrega/Documentacion/Documentocion%20software%20final.pdf)
+[Ducumentacion Final](https://docs.google.com/document/d/1PpDYNuYuad75eZ99nWkDN0br6vrYxa-Ef699dmTjlvQ/edit#)
