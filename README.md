@@ -12,10 +12,11 @@
 ![Image text](https://github.com/AlexanderTS1/Sistema_de_tutorias-TechnoVision/blob/main/Equipo%20de%20trabajo%20TechNoVision.jpeg)
 # Prueba nuestro sistema:
 1. Ejecutar el codigo  con `python manage.py runserver` o dirigirse al sitio: link aqui
-2. Ejemplo para login de cada usuario:
-   - Coordiandor de tutoria(Admin): Usuario:  Contraseña:
-   - Tutor: Usuario:  Contraseña:
-   - Tutorado: Usuario:  Contraseña:
+2. Link el proyecto subido en la web: https://sys-tutoria.herokuapp.com/
+3. Ejemplo para login de cada usuario:
+   - Coordiandor de tutoria(Admin): Usuario:  admin@admin.com Contraseña:admin
+   - Tutor: Usuario: roxana@unsaac.edu.pe Contraseña: roxana
+   - Tutorado: Usuario: 150408@unsaac.edu.pe Contraseña: 150408
 # Integrantes 🤓:
 - **Fiorella Choque Bueno** - GitHub Account - [FioChoque](https://github.com/FioChoque)
 - **Alexander Ttito Saya** - GitHub Account - [AlexanderTS1](https://github.com/AlexanderTS1)
